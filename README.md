@@ -50,9 +50,9 @@ Seu objetivo é criar um simples app que deve conter duas páginas, uma que exib
 Ao final do desafio, você deverá realizar um "pull request" neste repositório, o qual deverá conter o seguinte conteúdo:
 - Todo e qualquer arquivo necessário para que possamos reproduzir a aplicação criada em um servidor web simples;
 - Arquivo README.md, contendo:
-      - Breve descrição das funcionalidades da aplicação entregue;
-      - Ferramentas utilizadas, e o por que estas foram escolhidas para a realização do desafio;
-      - Decisões adotadas durante o planejamento e execução do desafio, justificando-as.
+  - Breve descrição das funcionalidades da aplicação entregue;
+  - Ferramentas utilizadas, e o por que estas foram escolhidas para a realização do desafio;
+  - Decisões adotadas durante o planejamento e execução do desafio, justificando-as.
 
 **IMPORTANTE:** Mesmo que você não consiga concluir o desafio por completo, envie o que você conseguiu fazer! Iremos avaliar todo e qualquer desenvolvimento que você nos apresentar! O mais importante deste desafio é, que ao final dele, você adquira novos conhecimentos ou aprimore os que você já possui. ;)
 
