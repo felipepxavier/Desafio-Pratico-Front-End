@@ -1,0 +1,23 @@
+{
+  "name": "desafio",
+  "version": "1.0.0",
+  "description": "desafio da empresa James Tip.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development --watch ./src/js/scripts.js --output ./src/js/optimized.js",
+    "build": "webpack --mode production ./src/js/scripts.js --output./src/js/optimized.js"
+  },
+  "author": "Felipe Pedroso",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.4.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/polyfill": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}

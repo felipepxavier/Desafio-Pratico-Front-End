@@ -1,0 +1,16 @@
+$orange: #fd9f69;
+
+$theme-colors: (
+  "primary": $orange
+);
+
+@import 'header';
+@import'home';
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import 'button';
+@import 'reset';
+@import 'table';
+@import 'input';
+@import 'modal';
+

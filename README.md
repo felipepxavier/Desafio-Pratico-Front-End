@@ -1,70 +1,21 @@
-# Desafio Prático Front-End
+## Página de cadastro de Produtos 
 
-## O que é?
+#### Utilização: *Basta abrir o arquivo index.html.*
 
-Este desafio faz parte do processo seletivo para o cargo de Desenvolvedor Front-end no James Tip.
-Tem por objetivo medir seu nível de conhecimento com tecnologias de desenvolvimento front-end, suas capacidades de propor novas ideias e arquiteturas para nossos serviços, sempre com o foco de manter o ambiente simples, seguro, funcional e objetivo.
+#### Na primeira página ela cadastra os dados digitados no localStorage, 
+#### podemos navegar pelos botões via scroll, e visualizar os dados inseridos na segunda página,
+#### juntamente com as opções de excluir e alterar.
 
-## Introdução
+## Ferramentas Utilizadas
 
-Um de nossos projetos internos necessita de uma “cara nova” para que os clientes do James Tip possam acessar e gerenciar informações necessárias para as operações do dia-a-dia de suas empresas. Para isto, você, no papel de Desenvolvedor Front-end, foi acionado para elaborar um novo Portal para os Clientes do James Tip.
-Seu objetivo é criar um simples app que deve conter no mínimo duas páginas, uma que exibe um formulário para cadastro com os campos abaixo, e outra que liste os dados cadastrados juntamente com as opções de editar e excluir os mesmos:
-- Código do Produto
-- Categoria do Produto (ex.: Eletrônico)
-- Nome do Produto
-- Nome do Fornecedor
-- Valor do Produto
+#### Utilizei o pré-processador SASS na estilização da página, organizando melhor as folhas de estilos,
+#### Utilizei a linguagem de programação JavaScript(Puro) para o desenvolvimento de toda lógica,
+#### justamente por ser uma linguagem de alto nível e a melhor para ser utilizada na Web.
+#### Customizei a validação padrão dos inputs com JS, para uma melhor experiência.
+#### Utilizei o Bootstrap, basicamente na implementação de modais.
 
-### Para isto, foram estipuladas algumas necessidades, as quais devem ser atendidas:
+## Pendencias
 
-- Implementação de compatibilidade entre navegadores de aplicativos da web
-- Projetar interfaces de usuário para alcançar objetivos de diversos usuários finais
-- Determinar o layout e a apresentação do aplicativo/página
-- Proporcionar uma experiência de usuário agradável, combinada com alto desempenho, segurança e capacidade de resposta
-- Garantir a viabilidade técnica de projetos de UI/UX
-- Otimizar aplicativos para máxima velocidade e escalabilidade
-- Realizar a engenharia da experiência de design de interação de elementos na interface do usuário
-- Garantir uma navegação intuitiva e com acessibilidade
+#### Faltou otimizar o código com Webpack e aplicar o compilador Babel para dar suporte a Browsers antigos.
 
-- ***A principal ideia aqui é que você faça por você mesmo (DIY).***
-
-## Requisitos técnicos
-### Para realização deste desafio, deverão ser observados os seguintes requisitos:
-
-- A aplicação deverá ser Single Page;
-- O Layout deverá ser TableLess; 
-- Fazer a persistência dos dados no localStorage ou IndexedDB;
-- **SOMENTE** é permitido a utilização de bibliotecas de estilo (ex.: Bootstrap);
-- Você é livre para estruturar o projeto da maneira que achar mais organizada.
-- Você é livre para implementar o código em qualquer padrão ou linguagem que achar mais adequado.
-- Você pode adicionar funcionalidades ao componente como desejar, mas não fuja da simplicidade.
- 
-## Entregáveis
-
-Ao final do desafio, você deverá realizar um "pull request" neste repositório, o qual deverá conter o seguinte conteúdo:
-- Todo e qualquer arquivo necessário para que possamos reproduzir a aplicação criada em um servidor web simples;
-- Arquivo README.md, contendo:
-  - Breve descrição das funcionalidades da aplicação entregue;
-  - Ferramentas utilizadas, e o por que estas foram escolhidas para a realização do desafio;
-  - Decisões adotadas durante o planejamento e execução do desafio, justificando-as.
-
-**IMPORTANTE:** Mesmo que você não consiga concluir o desafio por completo, envie o que você conseguiu fazer! Iremos avaliar todo e qualquer desenvolvimento que você nos apresentar! O mais importante deste desafio é, que ao final dele, você adquira novos conhecimentos ou aprimore os que você já possui.
-
-Após, envie e-mail para marcio.tavares@jamestip.com.br, com cópia para torres@jamestip.com.br, com o assunto "Desafio Prático Front-End", sinalizando a entrega do desafio para avaliação.
-
-
-## O que será avaliado?
-- Usabilidade
-- Criatividade
-- Boa apresentação (Layout Clean e Profissional)
-- Boas práticas da arquitetura da informação
-- Código limpo e organização
-- Documentação de código (Tip: Podem ser “comentários” no código;)
-- Capacidade de tomada de decisões técnicas
-
-# Desafio Bônus
-
-  Implementar a mesma aplicação utilizando, de preferência, um dos seguintes Frameworks (React.js OU Vue.js OU Angular). 
-  Também podem ser utilizados quaisquer outros Frameworks visuais.
-
-                                                                                          Good luck!
+#### OBS: com React seria muito mais fácil.

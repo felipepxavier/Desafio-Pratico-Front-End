@@ -1,0 +1,137 @@
+.table-content{
+    background-color: rgba(241, 122, 53, 0.25);
+    margin-top: 80px;
+    padding: 70px 50px;
+    text-align: center;
+    min-height: 100vh;
+
+    .menu {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 235px;
+        font-size: 20px;
+
+        a {
+            text-decoration: none;
+            color: #504e4e;
+            transition: color ease .4s;
+
+            &:hover {
+                color:#757575;
+            }
+        }
+    }
+
+    table {
+        text-align: center;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        
+    }
+
+    
+    th.action-th {
+        width: 115px;
+    }
+
+    tr {
+        margin: 1px;
+        border: solid 3px #fbdecc;
+    }
+
+
+    td {
+        background-color: #fff; 
+        vertical-align: middle;
+        border: solid #fbdecc;
+        height: 40px!important;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+}
+
+
+    
+@media screen and (max-width: 1440px){
+
+    .table-content{
+
+        td {
+            font-size: 14px;
+        }
+
+        h2 { 
+            font-size: 20px;
+            font-weight: bolder;
+        }
+       
+        .menu {
+            padding-right: 100px;
+
+        }
+    }
+
+}
+    
+@media screen and (max-width: 992px){
+   
+
+    .table-content {
+        height: 100%;
+       
+        .menu {
+            padding-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+
+    .table-content{
+
+        td {
+            font-size: 11px;
+        }
+
+        tr {
+            font-size: 11px;
+        }
+
+        .menu {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 668px){
+ 
+
+    .table-content{
+
+        td:nth-child(1),
+        th:nth-child(1){ 
+            display: none; 
+        }
+
+        td:nth-child(2),
+        th:nth-child(2){ 
+            display: none; 
+        }
+            
+       
+        .menu {
+            padding-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    .table-content{
+
+        td:nth-child(4),
+        th:nth-child(4){ 
+            display: none; 
+        }
+    }
+}

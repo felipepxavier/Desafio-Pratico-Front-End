@@ -1,0 +1,16 @@
+.home {
+    height: 75vh;
+
+    form {
+        border-radius: 15px;
+        padding: 20px;
+        border: 2px solid #eaeae9;
+    }
+    
+}
+
+@media screen and (max-width: 760px){
+    .home {
+        height: 100%;
+    }
+}
