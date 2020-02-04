@@ -54,7 +54,7 @@ $greyDark: #cececede;
     justify-content: center;
 
     button {
-        max-width: 50%;
+        max-width: 120px;
     }
 }
 
@@ -69,5 +69,13 @@ $greyDark: #cececede;
 
     .flex-custom {
         padding: 0;
+    }
+}
+
+
+@media screen and (max-width:  992px){
+
+    .form-control {
+        height: 30px;
     }
 }

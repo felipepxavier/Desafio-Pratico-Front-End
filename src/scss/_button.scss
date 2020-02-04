@@ -46,6 +46,12 @@
     }
 }
 
+@media screen and (max-width: 992px){
+    .btn {
+        height: 40px;
+    }
+}
+
 @media screen and (max-width: 500px){
 
     .btn-danger {
@@ -58,3 +64,4 @@
 
 
 }
+

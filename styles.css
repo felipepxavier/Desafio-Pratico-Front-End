@@ -66,19 +66,9 @@ header {
   }
 }
 .home {
-  height: 75vh;
-}
-.home form {
-  border-radius: 15px;
-  padding: 20px;
-  border: 2px solid #eaeae9;
+  min-height: 75vh;
 }
 
-@media screen and (max-width: 760px) {
-  .home {
-    height: 100%;
-  }
-}
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -9999,6 +9989,11 @@ h3 {
   border: none;
 }
 
+@media screen and (max-width: 992px) {
+  .btn {
+    height: 40px;
+  }
+}
 @media screen and (max-width: 500px) {
   .btn-danger {
     font-size: 10px;
@@ -10167,7 +10162,7 @@ body {
   justify-content: center;
 }
 .button-home button {
-  max-width: 50%;
+  max-width: 120px;
 }
 
 @media screen and (max-width: 570px) {
@@ -10181,6 +10176,11 @@ body {
 
   .flex-custom {
     padding: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  .form-control {
+    height: 30px;
   }
 }
 .modal-body {
