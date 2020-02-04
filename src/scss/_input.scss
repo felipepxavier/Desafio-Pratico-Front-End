@@ -58,6 +58,21 @@ $greyDark: #cececede;
     }
 }
 
+@media screen and (max-width: 1440px){
+    .flex-custom {
+        padding: 5px;
+        margin-top: 5px;
+    }
+}
+
+
+@media screen and (max-width:  992px){
+
+    .form-control {
+        height: 30px;
+    }
+}
+
 @media screen and (max-width: 570px){
     .row-flex {
         flex-direction: column;
@@ -69,13 +84,5 @@ $greyDark: #cececede;
 
     .flex-custom {
         padding: 0;
-    }
-}
-
-
-@media screen and (max-width:  992px){
-
-    .form-control {
-        height: 30px;
     }
 }

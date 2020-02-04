@@ -1,11 +1,10 @@
-
-
     const form = document.querySelector("#form");
     const formUp = document.querySelector("#form-update");
     const allFields = document.querySelectorAll('#form input, #form select');
     const resDelete = document.querySelector('.res-yes');
     let data = {};
     const table = document.querySelector('table');
+    let notSubmit = false;
 
     /**executar funcao de estilização após o carregamento da página */
     window.addEventListener("load", function() {
@@ -39,6 +38,7 @@
             const target = event.target;
 
             if (!this.validity.valid) {
+                notSubmit = true;
                 target.classList.add('invalid');
                 target.nextElementSibling.innerText = target.validationMessage;
             }
@@ -54,6 +54,20 @@
         }
     }
 
+    function validFields(target) {
+        if (!target.checkValidity()) {
+            notSubmit = true;
+            target.classList.add('invalid');
+            target.nextElementSibling.innerText = target.validationMessage;
+        }
+
+        if (target.checkValidity()) {
+            notSubmit = false;
+            target.classList.remove('invalid');
+            target.nextElementSibling.innerText = '';
+        }
+    }
+
 
     /** salva os dados modificados dos inputs na variável 'data' e valida/personaliza os campos obrigatórios */
     function handleChange(event) {
@@ -61,11 +75,7 @@
 
         const target = event.target;
         data[target.name] = target.value;
-
-        if (!target.checkValidity()) {
-            target.classList.add('invalid');
-            target.nextElementSibling.innerText = target.validationMessage;
-        }
+        validFields(target);
     }
 
     form.addEventListener('change', handleChange);
@@ -78,13 +88,8 @@
         const target = event.target;
         const nameField = target.name;
         const renameField = nameField.replace(/-up/, '');
-    
         data[renameField] = target.value;
-    
-        if (!target.checkValidity()) {
-            target.classList.add('invalid');
-            target.nextElementSibling.innerText = target.validationMessage;
-        }
+        validFields(target);
     }
 
     formUp.addEventListener('change', handleChangeUp);
@@ -128,6 +133,7 @@
 
      /** seta os dados da row corrente nos campos do formulário de atualização */
      function setValueUpdate(index) {
+        notSubmit = false;
         let items = [];
 
         let list = localStorage.getItem('LIST_PROD');
@@ -136,14 +142,18 @@
     
         const itemUpdate = items.find((element, index) => index === newIndex);
         data = { ...itemUpdate, index: newIndex };
-        console.log(itemUpdate)
         
        if (itemUpdate) {
-            document.querySelector('#code-up').value = itemUpdate.code;
-            document.querySelector('#category-up').value = itemUpdate.category;
-            document.querySelector('#name-up').value = itemUpdate.name;
-            document.querySelector('#provider-up').value = itemUpdate.provider;
-            document.querySelector('#price-up').value = itemUpdate.price;
+            const allFieldsUp = document.querySelectorAll('input[id$="-up"], select[id$="-up"]');
+            allFieldsUp.forEach(field => {
+                let nameId =  field.id.replace(/-up/, '');
+                field.value = itemUpdate[nameId] 
+                
+                if (field.checkValidity()) {
+                    field.classList.remove('invalid');
+                    field.nextElementSibling.innerText = '';
+                }
+            });   
        }
     }
    
@@ -218,8 +228,10 @@
 
     /** insere os dados na função alterValueStorage e atualiza os dados do localStorage na tabela */
     function handleSubmitUp(event) {
-        alterValueStorage(data);
-        loadStyles();
+        if (!notSubmit) {
+            alterValueStorage(data);
+            loadStyles();
+        } 
     }
 
 
