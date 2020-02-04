@@ -217,15 +217,16 @@
     function handleSubmit(event) {
         event.preventDefault();
 
-        allFields.forEach( field => {
-            field.value = '';
-        })
-
- 
+       
         setValueStorage(data);
         removeAll();
         setValuesTable();
         loadStyles();
+        
+        allFields.forEach( field => {
+            field.value = '';
+        })
+
     }
 
     form.addEventListener('submit', handleSubmit);
